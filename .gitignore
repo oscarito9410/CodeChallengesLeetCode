@@ -1,0 +1,6 @@
+
+*.bin
+*.lock
+.gradle/buildOutputCleanup/cache.properties
+.idea/uiDesigner.xml
+.idea/vcs.xml
