@@ -1,3 +1,5 @@
+import kotlin.math.min
+
 fun longestCommonPrefix(strs: Array<String>): String {
     // Longest common prefix string
     val longestCommonPrefix = StringBuilder()
@@ -8,7 +10,7 @@ fun longestCommonPrefix(strs: Array<String>): String {
     // Find the minimum length string from the array
     var minimumLength = strs[0].length
     for (i in 1 until strs.size) {
-        minimumLength = minimumLength.coerceAtMost(strs[i].length)
+        minimumLength = minOf(minimumLength, strs[i].length)
     }
     // Loop for the minimum length
     for (i in 0 until minimumLength) {
